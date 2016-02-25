@@ -13,6 +13,12 @@ RUN echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-or
 RUN apt-get update
 RUN apt-get install -y mongodb-org
 
+# Setup SSH
+RUN apt-get -y install openssh-server
+RUN mkdir /var/run/sshd
+RUN echo 'root:welcome1' | chpasswd
+RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
 # Create appdynamics dir
 RUN mkdir /appdynamics
 
