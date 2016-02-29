@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Start app
-node mobileFront.js
+nohup node mobileFront.js &

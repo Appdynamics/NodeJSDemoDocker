@@ -2,6 +2,9 @@
 
 # This is a starup script for the Node app
 
+# Set ENV Variables
+source /appdynamics/env.sh
+
 # Edit hosts file
 source /appdynamics/env.sh && echo "${MOVIE_TIX} http://api.partner.imdb.com" >> /etc/hosts
 source /appdynamics/env.sh && echo "${MOVIE_TIX} http://maps.googleapis.com" >> /etc/hosts
@@ -25,3 +28,8 @@ cd /appdynamics/mobile_movietickets && npm install appdynamics@${APPD_VERSION}
 
 # Start Node App
 source /appdynamics/mobile_movietickets/start.sh
+
+# Start Machine Agent
+source $MACHINE_AGENT_HOME/startMachineAgent.sh
+
+exit 0

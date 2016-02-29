@@ -43,3 +43,11 @@ fi
 if [ -z "${REDIS_URL}" ]; then
         export REDIS_URL="nodemobile_redis";
 fi
+
+if [ -z "${MACHINE_PATH_1}" ]; then 
+        export MACHINE_PATH_1=Movie-Tickets-Online
+fi
+
+if [ -z "${MACHINE_PATH_2}" ]; then 
+        export MACHINE_PATH_2=MobileFront
+fi
