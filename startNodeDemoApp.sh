@@ -27,7 +27,7 @@ docker pull appdynamics/nodemobile_load:latest
 docker run -d --name nodemobile_redis -p 6379:6379 appdynamics/nodemobile_redis:nodeRedis
 sleep 10
 
-docker run -d --name nodemobile_mongodb -p 27017:27107 --link nodemobile_redis:nodemobile_redis appdynamics/nodemobile_mongodb:nodeMongo
+docker run -d --name nodemobile_mongodb -p 27017:27017 --link nodemobile_redis:nodemobile_redis appdynamics/nodemobile_mongodb:nodeMongo
 
 sleep 10
 
