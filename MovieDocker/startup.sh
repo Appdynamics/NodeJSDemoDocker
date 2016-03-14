@@ -6,9 +6,9 @@
 source /appdynamics/env.sh
 
 # Edit hosts file
-source /appdynamics/env.sh && echo "${MOVIE_TIX} http://api.partner.imdb.com" >> /etc/hosts
-source /appdynamics/env.sh && echo "${MOVIE_TIX} http://maps.googleapis.com" >> /etc/hosts
-source /appdynamics/env.sh && echo "${MOVIE_TIX} http://api.twitter.com" >> /etc/hosts
+source /appdynamics/env.sh && echo "${MOVIE_TIX} api.partner.imdb.com" >> /etc/hosts
+source /appdynamics/env.sh && echo "${MOVIE_TIX} maps.googleapis.com" >> /etc/hosts
+source /appdynamics/env.sh && echo "${MOVIE_TIX} api.twitter.com" >> /etc/hosts
 
 # Set Environment variables
 source /appdynamics/env.sh && sed -i "s/CONTROLLER/${CONTROLLER}/g" /appdynamics/mobile_movietickets/mobileFront.js
